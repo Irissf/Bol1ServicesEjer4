@@ -50,18 +50,16 @@ namespace Bol1ServicesEjer4
                     threads[i] = new Thread(RunHorse);
                     threads[i].Start(horses[i]);
                 }
-                    threads[0].Join();
+                threads[0].Join();
 
                 Console.SetCursorPosition(0, 6);
                 if (winner == horseFav)
                 {
-                    Console.SetCursorPosition(0, 6);
                     Console.WriteLine("Congratulations");
                 }
                 else
                 {
-                    Console.SetCursorPosition(0, 6);
-                    Console.WriteLine("The winner is the horse number: "+winner);
+                    Console.WriteLine("The winner is the horse number: " + winner);
                 }
                 Console.SetCursorPosition(0, 7);
                 Console.WriteLine("Press 1 to play again, any key to exit");
@@ -88,7 +86,7 @@ namespace Bol1ServicesEjer4
                             horse.position = 100;
                             Console.SetCursorPosition(horse.position, horse.line);
                             Console.WriteLine(horse.line);
-                            winner = Convert.ToString( horse.line);
+                            winner = Convert.ToString(horse.line);
                             finish = true;
                         }
                         else
@@ -99,7 +97,7 @@ namespace Bol1ServicesEjer4
                             Console.WriteLine("-"); //para ver por donde pasas
                         }
                     }
-                    
+
                 } //fin lock
                 Thread.Sleep(horse.Sleep());
             }//fin while
@@ -113,7 +111,7 @@ namespace Bol1ServicesEjer4
                     }
                 }
             }
-                
+
         }
     }
 }
