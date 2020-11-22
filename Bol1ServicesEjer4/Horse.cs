@@ -11,13 +11,14 @@ namespace Bol1ServicesEjer4
         static readonly object control = new object();
         static Random rand = new Random(); // tiene que ser static para que no sea el mismo número para todos los caballos
         public int position;
-        public int sleep;
+        public int line;
         public string name;
-       
 
-        public Horse(int position, string name)
+
+        public Horse(int position, int line, string name)
         {
             this.name = name;
+            this.line = line;
             this.position = position;
         }
 
@@ -29,7 +30,7 @@ namespace Bol1ServicesEjer4
 
         public int Sleep()
         {
-          return rand.Next(10, 100);
+          return rand.Next(100, 300);
         }
 
     }
